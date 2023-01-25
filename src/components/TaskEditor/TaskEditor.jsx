@@ -8,7 +8,7 @@ export const TaskEditor = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    const text = form.elements.text.value;
+    const text = form.elements.text.value.trim();
     if (text !== '') {
       dispatch(addTask(text));
       form.reset();
